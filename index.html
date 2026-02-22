@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Airport Delay - Portfolio</title>
+    <style>
+        /* Pengaturan Dasar & Tema Pink Minimalis */
+        :root {
+            --bg-pink: #FFF0F5;      /* Lavender Blush - sangat soft */
+            --primary-pink: #FF80AB;  /* Pink aksen untuk judul/border */
+            --soft-pink: #F8BBD0;     /* Pink muda untuk shadow/border card */
+            --text-dark: #4A4A4A;     /* Abu-abu gelap untuk teks agar bersih */
+            --white: #FFFFFF;
+        }
+
+        body {
+            background-color: var(--bg-pink);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+
+        /* 1. Judul Besar di Tengah */
+        .header-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-pink);
+            margin-bottom: 20px; /* Dikurangi agar dekat dengan gambar besar */
+            font-weight: 700;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .header-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--soft-pink);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Gambar Utama (Besar) di bawah Judul */
+        .main-hero-image {
+            width: 100%;
+            max-width: 900px; /* Ukuran gambar besar */
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(248, 187, 208, 0.4);
+            margin-bottom: 50px;
+            border: 2px solid var(--white);
+        }
+
+        /* Container Grid untuk Dua Kolom Sejajar */
+        .content-container {
+            width: 100%;
+            max-width: 1000px; /* Diperkecil dari 1100px */
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 25px; /* Jarak sedikit dipersempit */
+        }
+
+        /* 2. Kotak (Card) Diperkecil */
+        .project-card {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 20px; /* Diperkecil dari 25px */
+            box-shadow: 0 8px 20px rgba(248, 187, 208, 0.2);
+            border: 1px solid var(--soft-pink);
+            transition: transform 0.3s ease;
+            height: fit-content;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            display: block;
+            border: 1px solid #f0f0f0;
+        }
+
+        /* Keterangan dengan Rata Kanan Kiri (Justify) */
+        .project-description {
+            font-size: 0.9rem; /* Diperkecil dari 0.95rem */
+            line-height: 1.5;
+            color: var(--text-dark);
+            margin: 0;
+            text-align: justify; 
+            font-weight: 400;
+        }
+
+        /* Responsif untuk HP */
+        @media (max-width: 900px) {
+            .content-container {
+                grid-template-columns: 1fr;
+                max-width: 90%;
+            }
+            .header-title {
+                font-size: 1.8rem;
+            }
+            .main-hero-image {
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="header-title">Analysis Airport Delay</h1>
+
+    <img src="Tableu - Airport Delay.png" alt="Main Tableau Airport Delay Report" class="main-hero-image">
+
+    <div class="content-container">
+        
+        <div class="project-card">
+            <img src="Causes Flight Delay.png" alt="Causes Flight Delay Report" class="project-image">
+            <p class="project-description">
+                This dataset presents the main causes of flight delays between 2017 and 2022. Airline-related issues, such as crew availability, maintenance, and operational disruptions, represent one of the primary causes. Another significant factor is late aircraft arrival from previous flights. Delays are also attributed to the National Aviation System (NAS), as well as security procedures and unfavorable weather conditions.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <img src="Airlines.png" alt="Airlines Delay Report" class="project-image">
+            <p class="project-description">
+                This bar chart illustrates the distribution of flight delays across airlines. The top five airlines with the highest number of delays during the observed period are Southwest Airlines (WN), American Airlines (AA), SkyWest Airlines (OO), Delta Air Lines (DL), and United Airlines (UA).
+            </p>
+        </div>
+
+        <div class="project-card">
+            <img src="Carrier Delay Percentage.png" alt="Carrier Delay Percentage Report" class="project-image">
+            <p class="project-description">
+                This trend illustrates the average percentage of airline-related delays from 2017 to 2022, which appears relatively stable throughout the observed period. Meskipun tren secara keseluruhan tetap relatif stabil, lonjakan signifikan diamati pada tahun 2020 antara bulan April dan Maret.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
